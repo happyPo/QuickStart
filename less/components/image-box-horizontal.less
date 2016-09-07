@@ -1,0 +1,52 @@
+.image-box-horizontal {
+  display: flex;
+  background: #fff;
+  line-height: 24px;
+  width: 800px;
+  .image {
+    position: relative;
+  }
+  .date {
+    background: #d1431f url("../images/bg-red.gif");
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 3px 15px;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+    width: 132px;
+  }
+  .description {
+    padding: 26px 26px 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .title {
+    font-size: 26px;
+    line-height: 1.08;
+    font-weight: bold;
+    color: #000;
+    margin: 0 0 4px;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  .author {
+    display: block;
+    margin: 0 0 8px;
+  }
+  .text {
+    overflow: hidden;
+    max-height: 70px;
+  }
+  .share {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #e4e4e4;
+    padding: 15px 0 0;
+  }
+}

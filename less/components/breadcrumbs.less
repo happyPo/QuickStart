@@ -1,0 +1,32 @@
+.breadcrumbs {
+  font-size: 16px;
+  color: #893b27;
+  font-weight: bold;
+  ul {
+    display: flex;
+  }
+  li {
+    position: relative;
+    &:not(:first-child) {
+      margin-left: 3px;
+      padding-left: 14px;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -4px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-right: 1px solid #717073;
+        border-top: 1px solid #717073;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  a {
+    font-weight: normal;
+    color: #717073;
+    text-decoration: none;
+  }
+}

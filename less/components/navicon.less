@@ -1,0 +1,64 @@
+.navicon {
+  width: 27px;
+  height: 25px;
+  position: relative;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 0;
+  @media @desktop {
+    display: none;
+  }
+  @media @mobile {
+    margin: -6px 6px 0 0;
+  }
+  span {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: #000;
+    border-radius: 5px;
+    .open-nav &{
+      background: none;
+      transform: rotate(90deg);
+      .transition(all .3s);
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 5px;
+      width: 100%;
+      background: #000;
+      border-radius: 5px;
+      .transition(all .3s ease-out .5s, transform .3s);
+      transform: rotate(0);
+      transform-origin: 50% 50%;
+    }
+    &:before {
+      top: -9px;
+      .open-nav &{
+        top: 0;
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+        .transition(all .3s, transform .3s ease-out .5s);
+      }
+    }
+    &:after {
+      bottom: -9px;
+      .open-nav &{
+        bottom: 0;
+        transform: rotate(-45deg);
+        transform-origin: 50% 50%;
+        .transition(all .3s, transform .3s ease-out .5s);
+      }
+    }
+  }
+}
+.open-nav {
+  .header .holder {
+    transform: translateX(0);
+  }
+}

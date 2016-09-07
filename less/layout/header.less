@@ -1,0 +1,110 @@
+@import "../components/nav.less";
+.logo-holder {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  @media @mobile {
+    flex-direction: column;
+    font-size: 9px;
+    align-items: flex-start;
+  }
+}
+.logo-1 {
+  display: block;
+  @media @mobile {
+    margin-top: 15px;
+  }
+  a {
+    background: url('../images/logo-ecerts.png') no-repeat;
+    width: 196px;
+    height: 43px;
+    display: block;
+    font-size: 0;
+    @media @mobile {
+      width: 52px;
+      height: 13px;
+      background-size: 100% 100%;
+      margin: 0 0 0 10px;
+    }
+  }
+}
+.navicon {
+  width: 27px;
+  height: 15px;
+  position: relative;
+  padding: 6px 0;
+  margin: 0 0 0 20px;
+  cursor: pointer;
+  @media @desktop {
+    display: none;
+  }
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: @color-blue;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background: @color-blue;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+  }
+}
+.open-nav {
+  .drop {
+    display: block;
+  }
+}
+.drop {
+  display: none;
+  position: absolute;
+  top: 33px;
+  right: -10px;
+  width: 250px;
+  font-size: 16px;
+  line-height: 36px;
+  background: @color-blue;
+  text-transform: none;
+  z-index: 5;
+  box-shadow: -2px 2px 3px fade(#000, 50%);
+  .drop-menu {
+    &:after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: -1;
+    }
+    li {
+      border-bottom: 1px solid #227594;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 0 10px;
+      color: #fff;
+      &:hover {
+        background: @color-blue-light;
+      }
+    }
+  }
+  .service {
+    display: block;
+  }
+}
+@import "../components/navicon.less";

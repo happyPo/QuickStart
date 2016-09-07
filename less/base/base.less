@@ -1,0 +1,62 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font: 16px/1.625 @base-font;
+  background: @color-grey-light;
+  color: @base-color;
+  min-width: 320px;
+  @media @mobile {
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+select, input, textarea {
+  color: @base-color;
+  font-size: 12px;
+  font-family: @base-font;
+}
+a {
+  color: @color-link;
+  text-decoration: underline;
+  &:hover {
+    color: @color-hover;
+  }
+}
+
+::-moz-selection {
+  color: #fff;
+  background: @color-tap;
+}
+::selection {
+  color: #fff;
+  background: @color-tap;
+}
+a, button, input {
+  .transition(color .3s, background-color .3s);
+}
+.pixel-holder {
+  input[type=checkbox] {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    z-index:9999;
+    cursor: pointer;
+    &:checked ~ img{
+      display: block !important;
+    }
+  }
+}
+.pixel {
+  transform: translate3d(-50%, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 999;
+  opacity: .3;
+  pointer-events: none;
+  display: none;
+}
